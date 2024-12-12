@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Navbar with Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        nav a {
+            color: white;
+            float: left;
+            padding: 14px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        nav a:hover {
+            background-color: #575757;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .content {
+            padding: 20px;
+            background-color: white;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+
+        .content h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <nav>
+        <a href="Home">Home</a>
+        <a href="About">About</a>
+        <a href="Contact">Contact</a>
+        <a href="Product">Product</a>
+    </nav>
+
+     
+    <div class="container">
+        <div class="content" id="content">
+            <h2>{{%CONTENT%}}</h2>
+        </div>
+    </div>
+
+     <script>
+        function showPage(page) {
+            const content = document.getElementById('content');
+            
+            if (page === 'home') {
+                content.innerHTML = `
+                    <h2>Welcome to the Home Page</h2>
+                    <p>This is the content for the home page.</p>
+                `;
+            } else if (page === 'about') {
+                content.innerHTML = `
+                    <h2>About Us</h2>
+                    <p>This is the content for the about page.</p>
+                `;
+            } else if (page === 'contact') {
+                content.innerHTML = `
+                    <h2>Contact Us</h2>
+                    <p>This is the content for the contact page.</p>
+                `;
+            }
+        }
+    </script>
+
+</body>
+</html>
+

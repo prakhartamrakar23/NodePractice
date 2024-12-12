@@ -1,0 +1,105 @@
+<div class="products-list">
+    <div class="products-detail">
+        <div class="product-image">
+            <img src="{{IMAGE}}"height='120' width="120">
+        </div>
+        <div class="product-specs">
+            <h3>{{%TITLE%}}</h3>
+            <p><span>Brand: </span>{{%BRAND%}}</p>
+            <p><span>Description: </span>{{%DESCRIPTION%}}</p>
+            <p><span>Category: </span>{{%CATEGORY%}}</p>
+            <p><span>Rating: </span>{{%RATING%}}</p>
+            
+        </div>
+    </div>
+    <div class="products-detail">
+        <div class="product-info"><h4>Price: RS{{%PRICE%}}</h4></div>
+        <div class="product-info"><button class="btn btn-primary">Buy Now</button>
+            <button class="btn btn-secondary">Buy Now</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- Add CSS Styling -->
+<style>
+    .products-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .products-detail {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 15px;
+        width: 280px;
+        background-color: #f9f9f9;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .products-detail:hover {
+        transform: translateY(-10px);
+    }
+
+    .product-image img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .product-specs h3 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .product-specs p {
+        font-size: 0.9rem;
+        margin: 5px 0;
+    }
+
+    .product-specs span {
+        font-weight: bold;
+    }
+
+    .product-info {
+        margin-top: 15px;
+    }
+
+    .product-info h4 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin: 5px;
+    }
+
+    .btn-primary {
+        background-color: #007bff;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        color: white;
+    }
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+    }
+</style>
